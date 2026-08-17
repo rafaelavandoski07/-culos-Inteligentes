@@ -1,65 +1,532 @@
+Style
+
+
+/* =========================================
+  CONFIGURAÇÕES GERAIS
+========================================= */
+
+
+* {
+   box-sizing: border-box;
+}
+
+
+body {
+   margin: 0;
+
+
+   font-family: "Libertinus Math", system-ui, sans-serif;
+
+
+   color: #222;
+
+
+   background:
+       radial-gradient(
+           circle at 85% 15%,
+           rgba(0, 174, 255, 0.18),
+           transparent 25%
+       ),
+       radial-gradient(
+           circle at 10% 80%,
+           rgba(240, 145, 189, 0.25),
+           transparent 30%
+       ),
+       linear-gradient(
+           120deg,
+           #fff0f8 0%,
+           #ffffff 45%,
+           #eef8ff 100%
+       );
+
+
+   min-height: 100vh;
+}
+
+
+
+
+/* =========================================
+  CABEÇALHO
+========================================= */
+
+
 header {
-   border-bottom: 3px solid #9e1b5d;
-   background-color: white;
-   padding: 10px 25px;
+   min-height: 130px;
+
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+   padding: 20px;
+
+
+   background:
+       linear-gradient(
+           90deg,
+           rgba(240, 145, 189, 0.90),
+           rgba(255, 255, 255, 0.92),
+           rgba(0, 174, 255, 0.80)
+       );
+
+
+   border-bottom: 4px solid #9e1b5d;
+
+
+   position: relative;
+   overflow: hidden;
+}
+
+
+
+
+/* Efeito tecnológico no cabeçalho */
+
+
+header::before {
+   content: "";
+   position: absolute;
+
+
+   width: 200px;
+   height: 200px;
+
+
+   border: 2px solid rgba(255,255,255,0.5);
+   border-radius: 50%;
+
+
+   right: 8%;
+   top: -35px;
+}
+
+
+header::after {
+   content: "";
+   position: absolute;
+
+
+   width: 150px;
+   height: 150px;
+
+
+   border: 2px solid rgba(255,255,255,0.4);
+   border-radius: 50%;
+
+
+   right: 12%;
+   top: 15px;
+}
+
+
+
+
+header h1 {
+   position: relative;
+   z-index: 2;
+
+
+   margin: 0;
+
+
+   font-size: clamp(40px, 6vw, 50px);
+
+
+   color: #9e1b5d;
+
+
    text-align: center;
 
 
-
-
+   text-shadow:
+       2px 2px 0 white,
+       0 3px 10px rgba(0,0,0,0.10);
 }
 
 
-h2 {
-   margin-left: 42px;
-   color: rgb(0, 0, 0);
-}
 
 
-h1 {
-   text-align: center;
-}
-
-
-p {
-   text-align: justify;
-   padding: 10px;
-}
+/* =========================================
+  ÁREA DE TEXTO
+========================================= */
 
 
 .texto {
-   background-color: white;
-   border: 1px solid #ccc;
-   padding: 20px;
-   margin-top: 20px;
-   border: 5px solid #9e1b5d;
- margin-bottom: 40px;
- margin-left: 40px;
- margin-right: 40px;
- font-size: 20px;
+   width: min(1100px, 90%);
+
+
+   margin: 50px auto 80px;
+
+
+   padding: 45px;
+
+
+   background: rgba(255, 255, 255, 0.94);
+
+
+   border-radius: 25px;
+
+
+   border: 1px solid #f0d9e5;
+
+
+   box-shadow:
+       0 10px 35px rgba(80, 40, 80, 0.10);
+
+
+   backdrop-filter: blur(8px);
 }
 
 
-img {
-   display: block;
-   margin: 0 auto;
-   max-width: 60%;
-   height: auto;
-   margin-bottom: 10px;
-}
 
 
-a {
-   color: blue;
-   text-decoration: none;
-   font-weight: 700;
-}
+/* =========================================
+  TÍTULOS
+========================================= */
 
 
-a:hover {
-   color: red;
-}
-.container-link {
-   text-align: center;
+.texto h2 h3 {
+   color: #9e1b5d;
+
+
+   font-size: clamp(27px, 4vw, 38px);
+
+
+   margin-top: 35px;
    margin-bottom: 20px;
+
+
+   line-height: 1.2;
+}
+
+
+
+
+/* Primeiro título */
+
+
+.texto h2:first-child {
+   margin-top: 0;
+}
+
+
+
+
+/* Linha decorativa abaixo dos títulos */
+
+
+.texto h2::after {
+   content: "";
+
+
+   display: block;
+
+
+   width: 100px;
+   height: 4px;
+
+
+   margin-top: 10px;
+
+
+   background:
+       linear-gradient(
+           90deg,
+           #9e1b5d,
+           #f091bd,
+           #2196d3
+       );
+
+
+   border-radius: 10px;
+}
+
+
+
+
+
+
+/* =========================================
+  PARÁGRAFOS
+========================================= */
+
+
+.texto p {
+   font-family: Arial, sans-serif;
+
+
+   font-size: 20px;
+
+
+   line-height: 1.75;
+
+
+   color: #333;
+
+
+   text-align: justify;
+
+
+   margin-bottom: 20px;
+}
+
+
+
+
+/* =========================================
+  LISTA
+========================================= */
+
+
+.texto ul {
+   font-family: Arial, sans-serif;
+
+
+   padding: 25px 30px 25px 50px;
+
+
+   margin: 25px 0 35px;
+
+
+   background:
+       linear-gradient(
+           135deg,
+           rgba(240, 145, 189, 0.12),
+           rgba(33, 150, 211, 0.08)
+       );
+
+
+   border-left: 5px solid #9e1b5d;
+
+
+   border-radius: 10px;
+}
+
+
+
+
+.texto li {
+   font-size: 17px;
+
+
+   line-height: 1.7;
+
+
+   margin-bottom: 15px;
+
+
+   color: #333;
+}
+
+
+
+
+.texto li:last-child {
+   margin-bottom: 0;
+}
+
+
+
+
+/* =========================================
+  IMAGENS
+========================================= */
+
+
+.texto img {
+   display: block;
+
+
+   width: 80%;
+
+
+   max-width: 500px;
+
+
+   height: auto;
+
+
+   margin: 35px auto 45px;
+
+
+   border-radius: 18px;
+
+
+   border: 3px solid #f1dce8;
+
+
+   background-color: white;
+
+
+   padding: 8px;
+
+
+   box-shadow:
+       0 8px 25px rgba(0, 0, 0, 0.12);
+
+
+   transition:
+       transform 0.3s ease,
+       box-shadow 0.3s ease;
+}
+
+
+
+
+/* Efeito nas imagens */
+
+
+.texto img:hover {
+   transform: scale(1.02);
+
+
+   box-shadow:
+       0 12px 30px rgba(158, 27, 93, 0.18);
+}
+
+
+
+
+/* =========================================
+  EFEITO TECNOLÓGICO ENTRE SEÇÕES
+========================================= */
+
+
+.texto h2:not(:first-child) {
+   position: relative;
+
+
+   padding-top: 20px;
+}
+
+
+
+
+/* =========================================
+  RESPONSIVIDADE
+========================================= */
+
+
+@media (max-width: 768px) {
+
+
+   header {
+       min-height: 140px;
+
+
+       padding: 20px;
+   }
+
+
+   header h1 {
+       font-size: 40px;
+   }
+
+
+
+
+   .texto {
+       width: 94%;
+
+
+       margin: 30px auto 50px;
+
+
+       padding: 25px;
+
+
+       border-radius: 18px;
+   }
+
+
+
+
+   .texto h2 {
+       font-size: 28px;
+   }
+
+
+
+
+   .texto h3 {
+       font-size: 21px;
+   }
+
+
+
+
+   .texto p {
+       font-size: 16px;
+
+
+       line-height: 1.6;
+
+
+       text-align: left;
+   }
+
+
+
+
+   .texto ul {
+       padding: 20px 20px 20px 35px;
+   }
+
+
+
+
+   .texto li {
+       font-size: 16px;
+
+
+       line-height: 1.6;
+   }
+
+
+
+
+   .texto img {
+       width: 100%;
+
+
+       margin: 25px auto 35px;
+   }
+}
+
+
+
+
+/* =========================================
+  CELULARES PEQUENOS
+========================================= */
+
+
+@media (max-width: 480px) {
+
+
+   header {
+       min-height: 120px;
+   }
+
+
+   header h1 {
+       font-size: 32px;
+   }
+
+
+   .texto {
+       padding: 20px;
+   }
+
+
+   .texto h2 {
+       font-size: 25px;
+   }
+
+
+   .texto h3 {
+       font-size: 20px;
+   }
 }
