@@ -63,13 +63,9 @@ header {
    padding: 20px;
 
 
-   background:
-       linear-gradient(
-           90deg,
-           rgba(240, 145, 189, 0.90),
-           rgba(255, 255, 255, 0.92),
-           rgba(0, 174, 255, 0.80)
-       );
+   background-color: 
+           rgba(240, 145, 189, 0.90);
+       
 
 
    border-bottom: 4px solid #9e1b5d;
